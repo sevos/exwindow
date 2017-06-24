@@ -11,6 +11,6 @@ defimpl Windowable, for: Window.Timed do
   end
 
   def items(%Window.Timed{items: items}) do
-    Enum.map(:queue.to_list(items), fn {_, i} -> i end)
+    Enum.map(:queue.to_list(items), fn i -> i end)
   end
 end
